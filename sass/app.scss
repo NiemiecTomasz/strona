@@ -1,0 +1,191 @@
+@import "../stylesheets/_bootstrap";
+
+.logo{
+	position: absolute;
+	left:50%;
+	transform: translate(-50%);
+	margin-top: -50px;
+}
+.logoSm{
+	position: absolute;
+	left:50%;
+	transform: translate(-50%);
+	margin-top: 0px;
+	width:auto;
+	height:100%;
+}
+
+.nav-top{
+	margin-top:0px;
+	width:100%;
+	border-radius: 0;
+	font-size:12px;
+}
+
+header{
+	background-color:$body-bg2;
+}
+.opacity{
+	opacity: 0;
+}
+.navbar{
+	z-index: 990 !important;
+}
+
+.slider{
+	height:100vh;
+	background: url('../images/slider.jpg');
+	background-attachment :fixed;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+#description_me{
+	background-color: $body-bg2;
+	padding-top:200px;
+	padding-bottom:100px;
+	opacity : 0;
+
+
+	h1{
+		@include changeColorFontCookie(3em,$pinkColor);
+		margin-bottom:30px;
+	}
+	p{
+		@include changeColorFontLato(1em,$grayColor);
+		line-height: 25px;
+		letter-spacing: 1px;
+		text-indent:20px;
+	}
+	
+	img{
+		margin:0 auto;
+	}
+
+}
+
+#character{
+	margin-top:80px;
+	opacity : 0;
+
+	img{
+	display: inline-block;
+		}
+	h2{
+		display: inline;
+		@include changeColorFontLato(1.1em,#000);
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing:1px;
+	}
+	h6{
+		@include changeColorFontLato(0.9em,$grayColor);
+		line-height:15px;
+	}
+	span{
+		margin-bottom:30px;
+	}
+}
+
+#Offer{
+	@include h2-option;
+	padding-bottom:100px;
+	opacity : 0;
+
+	button {
+		@include button-variant(#fff,$pinkColor,$pinkColor);
+		margin-right:10px;
+		margin-bottom:40px;
+	}
+	h5{
+		@include changeColorFontCookie(30px,#000);
+		text-align: left;
+		padding-top:40px;
+	}
+	p{
+		@include changeColorFontLato(14px,$grayColor);
+		text-align:left;
+		letter-spacing:0.7px;
+		line-height:16px;
+	}
+	img{
+		margin:0 auto;
+	}
+	
+}
+.offerDescription{
+	display:none;
+}
+
+#gallery{
+	@include h2-option;
+	background-color: $body-bg2;
+	opacity : 0;
+	
+	img{
+		margin-bottom:30px;
+
+		&:hover{
+			transform: scale(1.1,1.1);	
+		}
+	}
+}
+
+.wallpaper{
+	position:relative;
+	background-image:url("../images/spa_wallpaper.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-width:100%;
+	color:#fff;
+	height:400px;
+
+	&::before{
+		content:"";
+		position:absolute;
+		min-width:100%;
+		left:0;
+		height:100%;
+		background-color: rgba(0,0,0, 0.6);
+	}
+
+	.content{
+		position:absolute;
+		top:50%;
+		line-height: 30px;
+		text-align:center;
+		min-width:100%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		font-size: 50px;
+
+		button{
+			@include button-variant(#fff,$pinkColor,$pinkColor);
+		}
+	}
+}
+.blackWindow{
+	position:fixed;
+	width: 100%;
+	height:100%;
+	top:0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 999;
+	
+	div{
+		position:relative;
+		width: 100%;
+		height:100%;
+
+		img{
+			position:absolute;
+			height:80%;
+			width: auto;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			
+
+			}	
+		}
+}
